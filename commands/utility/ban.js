@@ -16,6 +16,9 @@ module.exports = {
 		.setDefaultMemberPermissions(PermissionFlagsBits.BanMembers)
 		.setDMPermission(false),
         async execute(interaction) {
+			// if(!member.roles.cache.has('784181622056288307')){
+			// 	return interaction.reply('You do not have permission to use this command.')
+			// }
             const target = interaction.options.getUser('target');
             const reason = interaction.options.getString('reason') ?? 'No reason provided';
         
